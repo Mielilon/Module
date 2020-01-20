@@ -1,0 +1,40 @@
+.calculator
+  background-color: rgba(34, 34, 34, .25)
+  border-radius: 12px
+  padding: 28px 28px 40px
+  
+  &__group
+    display: flex
+    .text-input--select
+      max-width: 232px
+
+  &__result
+    width: 232px
+    margin-right: 20px
+    &-placeholder
+      color: #888888
+      font-size: 14px
+      margin-top: 8px
+    &-price
+      font-size: 34px
+      line-height: 1.2
+      margin-top: 6px
+      font-weight: 600
+
+  &__links
+    display: flex
+    flex-direction: column
+    .link
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  @include respond-to(sm)
+    &__group
+      flex-wrap: wrap
+      .text-input--select
+        max-width: unset
+        width: 100%
+
+    &__result
+      width: 100%
+      margin: 0

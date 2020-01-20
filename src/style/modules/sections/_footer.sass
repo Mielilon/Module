@@ -1,0 +1,54 @@
+
+.footer
+  padding: 80px 0 40px 0
+  background-color: #222
+  color: #fff
+  position: relative
+  &__desc
+    margin-top: 16px
+    color: #999
+    max-width: 424px
+    font-size: 16px
+    line-height: 1.5
+    p
+      margin: 0
+  .logo
+    position: absolute
+  .l-row
+    position: relative
+    z-index: 1
+
+    &.site-info
+      font-size: 14px
+      color: #999999
+      margin-top: 80px
+      span, a
+        width: calc(100% / 3)
+      a
+        text-decoration: underline
+    
+    .text-center
+      text-align: center
+    .text-right
+      text-align: right
+
+  @include respond-to(lg)
+    .l-row
+      &.site-info
+        margin-top: 60px
+        span, a
+          width: 100%
+          margin: 8px 0
+          text-align: left !important
+        a
+          text-decoration: underline
+
+  @include respond-to(md)
+    padding: 40px 0
+    margin-top: 80px
+
+    .l-row
+      &.site-info
+        margin-top: 44px
+        span, a
+          margin: 4px 0

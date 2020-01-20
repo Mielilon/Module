@@ -1,0 +1,165 @@
+.hat
+  background-image: url('/img/hat-bg.jpg')
+  background-size: cover
+  background-position: center center
+  color: #fff
+  min-height: 100vh
+
+  .l-container
+    min-height: 100vh
+    flex-direction: column
+
+  &__content
+    padding: 100px 0 80px 0
+    align-content: center
+    flex: 1
+  
+  &__gadgets
+    display: flex
+    color: #ccc
+    span
+      &:not(:last-child)
+        margin-right: 32px
+
+  &__title
+    font-size: 58px
+    margin-top: 20px
+    max-width: 614px
+  
+  &__actions
+    margin-top: 40px
+    flex-wrap: wrap
+
+  &__left
+    width: 650px
+
+  &__right
+    width: 550px
+    padding-top: 270px
+    h3
+      font-size: 32px
+      font-weight: 400
+      margin-left: 28px
+      margin-bottom: 20px
+
+.header
+  padding: 36px 0
+  align-items: center
+  font-size: 14px
+  flex: 0
+  &__logo
+    img
+      height: 22px
+  &__addresses
+    text-align: right
+    margin-right: 52px
+    display: flex
+    flex-direction: column
+
+    span:not(:first-child)
+      margin-top: 6px
+
+  &__phone
+    text-align: right
+    margin-right: 44px
+    display: flex
+    flex-direction: column
+    &-number
+      font-size: 22px
+
+  &__status
+    margin-right: 28px
+
+  &__socials
+    img
+      max-width: 30px
+      max-height: 30px
+
+@include respond-to(xl)
+  .header
+    &__logo
+      img
+        height: 20px
+
+    &__addresses
+      margin-right: 32px
+
+    &__phone
+      margin-right: 24px
+      &-number
+        font-size: 20px
+
+    &__status
+      margin-right: 20px
+      .btn
+        padding-left: 28px
+        padding-right: 28px
+
+  .hat
+    &__right
+      padding-top: 40px
+      margin-left: auto
+
+@include respond-to(lg)
+  .hat
+    &__content
+      padding-top: 80px
+      
+    &__right
+      padding-top: 80px
+      margin-left: 0
+      h3
+        margin-left: 0
+
+@include respond-to(md)
+  .hat
+    &__title
+      font-size: 42px
+    &__actions
+      margin-top: 28px
+    &__content
+      padding-top: 40px
+
+    &__right
+      padding-top: 60px
+      margin-left: 0
+      h3
+        font-size: 28px
+
+@include respond-to(sm)
+  .hat
+    &__actions
+      justify-content: center
+      display: flex
+
+    &__content
+      padding-top: 20px
+      padding-bottom: 40px
+    &__title
+      font-size: 28px
+      text-align: center
+    &__gadgets
+      display: none
+    &__right
+      padding-top: 80px
+      h3
+        text-align: center
+        font-size: 22px
+
+  .header
+    align-items: flex-start
+    flex-wrap: nowrap 
+    &__logo
+      flex: 110px 0 1
+      margin-top: 4px
+      margin-right: 20px
+      img
+        height: unset
+        width: 100%
+
+    &__phone
+      margin-right: 0
+      white-space: nowrap
+      &-number
+        font-size: 18px
+      

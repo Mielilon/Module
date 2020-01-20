@@ -1,0 +1,29 @@
+.about
+  background-color: #222
+  padding: 160px 0 120px
+  margin-top: 40px
+  clip-path: polygon(0px 0px, 100% 96px, 100% 100%, 0px 100%)
+  &__title
+    color: #999
+
+  &__desc
+    p
+      margin-top: 32px
+      font-size: 34px
+      line-height: 1.6
+      color: #fff
+
+  @include respond-to(lg)
+    clip-path: polygon(0px 0px, 100% 40px, 100% 100%, 0px 100%)
+    padding: 80px 0 80px 0
+    &__desc
+      p
+        font-size: 26px
+
+  @include respond-to(sm)
+    clip-path: polygon(0px 0px, 100% 20px, 100% 100%, 0px 100%)
+    padding: 80px 0 80px 0
+    margin-top: 40px
+    &__desc
+      p
+        font-size: 20px

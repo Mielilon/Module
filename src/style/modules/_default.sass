@@ -1,0 +1,165 @@
+// Modules
+
+@import 'sections/hat'
+@import 'sections/trust'
+@import 'sections/why-us'
+@import 'sections/about'
+@import 'sections/process'
+@import 'sections/contacts'
+@import 'sections/footer'
+@import 'calculator'
+
+.btn
+  display: inline-block
+  background: $primary
+  color: #fff
+  font-size: 16px
+  text-decoration: none
+  font-weight: 400
+  border-radius: 100px
+  transition: .25s ease
+  padding: 16px 34px
+  white-space: nowrap
+  cursor: pointer
+  &:hover
+    background-color: #3984e2
+  &:active
+    background-color: #2d6fc3
+
+  &--lg
+    padding: 20px 48px
+
+  &--flat
+    background-color: transparent !important
+    &:hover
+      color: #ccc
+    &:active
+      color: #999
+
+  &--icon
+    &:hover
+      opacity: .75
+    &:active
+      opacity: .5
+
+.link
+  color: $primary
+  text-decoration: none
+  &:hover
+    color: #3984e2
+  &:active
+    color: #2d6fc3
+
+
+.text-input
+  position: relative
+
+  &__icon
+    position: absolute
+    right: 16px
+    font-size: 16px
+    top: 22px
+    color: #ccc
+
+  &__label
+    position: absolute
+    width: calc(100% - 32px)
+    color: #ccc
+    padding-top: 8px
+    transition: .25s ease
+    pointer-events: none
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    top: 1px
+
+  &:hover input, &:hover textarea
+    border-color: #ccc
+
+  input
+    font-family: 'Open Sans', sans-serif;
+    padding: 38px 16px 20px 0px
+    font-size: 18px
+    border: none
+    line-height: 1.25
+    width: 100%
+    transition: .25s ease, padding 0s 
+    color: #fff
+    &:focus
+      border-color: $primary
+      outline: none
+      & ~ .text-input__label
+        padding-top: 8px
+        font-size: 14px
+    &::-webkit-input-placeholder
+      color: #ccc
+    &:not([required])
+      &::-webkit-input-placeholder
+        color: #ccc
+
+  &.has-icon 
+    input
+      padding-right: 48px
+    .text-input__label
+      padding-right: 48px
+
+
+  input:valid
+    & ~ .text-input__label
+      padding-top: 8px
+      font-size: 14px
+  
+  &--select
+    position: relative
+    cursor: pointer
+    .icon-chevron_down
+      top: 44px
+    input
+      pointer-events: none
+      background: transparent
+      &::-webkit-input-placeholder
+        color: #ccc
+    &.autocomplete
+      input
+        pointer-events: auto
+    &.active
+      .text-input__selected-info
+        color: #ccc
+    .select-list
+      margin-top: -12px
+      z-index: 1
+      width: 100%
+      position: absolute
+      background-color: #222
+      border-radius: 4px
+      opacity: 0
+      transform-origin: center top
+      transform: scaleY(0)
+      transition: .25s ease 
+      max-height: 372px
+      overflow-y: auto
+      &__item
+        padding: 8px 16px
+        line-height: 24px
+        cursor: pointer
+        color: #888
+        &:first-child
+          padding-top: 12px
+        &:last-child
+          padding-bottom: 12px
+        &:hover
+          color: #fff
+        &.active
+          color: #fff
+          background-color: #444
+        &.search
+          color: $primary
+      &.active
+        opacity: 1
+        transform: scaleY(1)
+
+@include respond-to(sm)
+
+  .btn
+    &--lg
+      padding: 16px 32px

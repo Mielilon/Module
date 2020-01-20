@@ -1,0 +1,59 @@
+.process
+  color: #fff
+  background-color: #222
+  &__img
+    height: 550px
+    width: 550px
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+      object-position: center center
+
+  &__steps
+    width: 550px
+    margin-top: 64px
+    margin-left: 100px
+    margin-bottom: 165px
+    &-item
+      margin-top: 36px
+      &-title
+        margin-bottom: 12px
+        font-size: 18px
+        font-weight: 600
+        display: block
+      p
+        color: #999999
+        max-width: 500px
+        line-height: 1.5
+
+  &__title
+    font-size: 64px
+    margin-bottom: 60px
+
+  @include respond-to(xl)
+    &__img
+      height: 550px
+      width: 450px
+    &__steps
+      width: 390px
+      margin-left: 60px
+      margin-bottom: 92px
+
+  @include respond-to(lg)
+    &__img
+      height: 320px
+      width: 100%
+    &__steps
+      width: 100%
+      max-width: 500px
+      margin-left: auto
+      margin-bottom: 92px
+
+  @include respond-to(sm)
+    &__title
+      font-size: 42px
+    &__img
+      height: 280px
+
+

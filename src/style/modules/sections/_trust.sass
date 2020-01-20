@@ -1,0 +1,30 @@
+.trust
+  padding: 60px 20px
+  max-width: 1240px
+  margin: auto
+  .l-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: nowrap
+    img 
+      height: 60px
+      opacity: .2
+      margin: 0 20px
+
+  @include respond-to(lg)
+    .l-row
+      img 
+        height: 50px
+
+  @include respond-to(md)
+    .l-row
+      img 
+        height: 45px
+
+  @include respond-to(sm)
+    padding: 40px 20px
+    .l-row
+      img 
+        height: 50px
+        margin: 28px 0

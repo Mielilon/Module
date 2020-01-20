@@ -1,0 +1,59 @@
+.hat
+  .l-container
+    .l-row.header
+      .header__logo: img(src="/img/logo.svg" alt="")
+      .l-spacer
+      .header__addresses.d-none-lg
+        span Широкий переулок, 16
+        span Красногеройская улица, 30
+      .header__phone
+        span.bold.header__phone-number +7 (000) 000-00-00
+        a(href="#") заказать звонок
+      .header__status.d-none-md
+        a.btn Статус ремонта
+      .header__socials.d-none-lg
+        a(href="#").btn--icon: img(src="/img/icons/vk.svg" alt="")
+
+    .l-row.hat__content
+      .hat__left
+        .hat__gadgets
+          span.capture Телефоны
+          span.capture Планшеты
+          span.capture Ноутбуки
+        h1.hat__title Ремонт устройств <br> в центре Ижевска <br> с гарантией
+        .hat__actions
+          a.btn.btn--lg.mb-3-sm Оставить заявку
+          a.btn.btn--lg.btn--flat.d-none.d-inline-block-md Статус ремонта
+
+      .hat__right
+        h3 Рассчитать стоимость
+        .calculator
+          .calculator__group
+            .text-input.text-input--select.has-icon.mr-5.mr-0-sm
+              input(type='text' value="Телефон")
+              .text-input__label Устройство
+              img(src="/img/icons/chevron-down.svg").icon-chevron_down.text-input__icon
+              .select-list
+                .select-list__item.active Телефон
+                .select-list__item Планшет
+                .select-list__item Ноутбук
+
+            .text-input.text-input--select.has-icon
+              input(type='text' value="Телефон")
+              .text-input__label Проблема
+              img(src="/img/icons/chevron-down.svg").icon-chevron_down.text-input__icon
+              .select-list
+                .select-list__item.active Телефон
+                .select-list__item Планшет
+                .select-list__item Ноутбук
+
+          .calculator__group.mt-7.mt-5-sm
+            .calculator__result
+              .capture Стоимость Ремонта:
+              .calculator__result-placeholder Укажите проблему
+              //- .calculator__result-price 400р
+
+            .calculator__links.mt-8-sm
+              a(href="").link Позвонить
+              a(href="").link Заказать звонок
+              a(href="").link Где мы находимся?
